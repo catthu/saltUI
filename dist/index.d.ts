@@ -1,7 +1,12 @@
 /// <reference types="react" />
-interface ButtonProps {
-    label: string;
-}
-declare const Button: (props: ButtonProps) => JSX.Element;
+import React from 'react';
 
-export { Button };
+interface ButtonProps {
+    text: string;
+    onClick: () => void;
+}
+declare const Button: ({ text, onClick }: ButtonProps) => JSX.Element;
+
+declare const Input: React.FC;
+
+export { Button, Input };
